@@ -385,9 +385,11 @@ a:hover, a:focus, a:active {
   margin: 1rem;
   color: #fff;
   cursor: pointer;
-  height: 50px;
   width: 100%;
   background: #995F44;
+}
+.gallery-grid .gallery-item img {
+  display: block;
 }
 
 header {
@@ -522,6 +524,11 @@ header .menu-btn {
   .container-b {
     padding-left: 2vh;
     padding-right: 2vh;
+  }
+
+  .container-c {
+    padding-left: 10vh;
+    padding-right: 10vh;
   }
 
   .section-heading {
@@ -952,7 +959,7 @@ header .menu-btn {
   }
 
   .gallery-grid .gallery-item {
-    flex: 1 0 26rem;
+    flex: 1 0 15rem;
   }
 }
 @media screen and (min-width: 1024px) {
