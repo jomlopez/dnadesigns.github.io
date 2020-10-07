@@ -137,6 +137,11 @@ a:hover, a:focus, a:active
 .container 
     padding: 0 5vh
 
+.container-c
+    padding-left: 10vh
+    padding-right: 10vh
+
+
 .top-pad
     padding-top: 2rem
 
@@ -165,7 +170,7 @@ a:hover, a:focus, a:active
         text-transform: uppercase
 
         h2  
-            padding: 1.7rem 0.5rem
+            padding: 1.7rem 2rem
             position: relative
     
     .service-section__thumb 
@@ -351,7 +356,7 @@ a:hover, a:focus, a:active
         margin: 2rem 0
         font-family: $display-font
         font-weight: 200
-        font-size: 20pt
+        font-size: 18pt
         width: auto
         
         img
@@ -359,23 +364,92 @@ a:hover, a:focus, a:active
             width: auto
             margin: 0 auto
 
+.gallery-grid-container 
+    background: $paper
 
 .gallery-grid
     display: flex
     flex-wrap: wrap
-    margin: -1rem -1rem
-    padding-bottom: 3rem
 
     .gallery-item
+        height: auto
+        line-height: auto
         position: relative
-        margin: 1rem
+        margin: 0 1rem 1rem 0
         color: #fff
         cursor: pointer
-        width: 100%
+        // width: 100%
         background: $terracotta
 
         img 
             display: block
+            height: 100%
+.gallery-slider
+    position: relative
+    margin-bottom: 2rem
+
+    .slider-item
+        margin: 0 0.5rem
+
+        a
+            position: relative
+            display: flex
+            align-items: center
+            flex-direction: column
+            justify-content: center
+            padding: 2rem 0.5rem
+            border: solid 1px $beige
+            transition: all 0.4s ease-in-out
+
+            img 
+                // width: 40%
+                display: block
+                // filter: grayscale(100%)
+                transition: all 0.4s ease-in-out
+
+            &:hover 
+                text-decoration: none
+                background: $beige
+
+                h4
+                    color: #fff
+
+                img 
+                    filter: brightness(200%)
+                    transition: all 0.4s ease-in-out
+            h4  
+                font-size: 12pt
+                letter-spacing: 0.1vw
+                text-transform: uppercase
+                padding: 0.6rem 0
+                margin: 0 auto
+                text-align: center
+
+                
+
+    .control
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        z-index: 3
+    
+        img 
+            width: 30px
+            filter: grayscale(100%)
+
+        &.next
+            right: -30px
+        &.prev
+            left: -30px
+
+.gallery-page-title 
+    background: #faf9f5
+    transform: translateY(50%)
+    padding: 1rem 2rem
+    display: inline-block
+    text-align: center
+    border: 1px solid $beige
+    color: $beige
 
 @import header
 @import media
