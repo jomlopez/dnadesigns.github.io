@@ -66,4 +66,46 @@ const instagramRegExp = new RegExp(
       console.error("Fetching Instagram photos failed", e);
     }
   })();
+
+  // Gallery Slider
+
+  $(document).ready(function(){
+    $('.gallery-slider').slick({
+      centerMode: true,
+      centerPadding: '27px',
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      nextArrow: '<span class="control next"><img src="images/icons/chevron-right.svg"></span>',
+      prevArrow: '<span class="control prev"><img src="images/icons/chevron-left.svg"></span>',
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            centerPadding: '27px'
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            centerPadding: '50px'
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+  });
+  
   
