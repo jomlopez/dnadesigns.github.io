@@ -78,10 +78,10 @@
                     -webkit-transform: scale(0.5) rotate(0.02deg)
                     transform: scale(0.6) rotate(0.02deg)
                     transform-origin: top left
-
+    
     .container-b 
-        padding-left: 2.5vw
-        padding-right: 2.5vw
+        padding-left: 4vw
+        padding-right: 4vw
 
     .section-heading 
         font-size: 2rem
@@ -181,6 +181,27 @@
                 img
                     width: 20%
 
+    .content-area
+        display: flex
+        flex-direction: column
+        flex-wrap: wrap
+
+        .col-content-section
+            order: 0
+            align-self: auto
+        
+        .col-image-section
+            order: 1
+            align-self: auto
+
+            .img-contact
+                width: 30%
+                min-width: 90px
+                max-width: 120px
+                position: absolute
+                top: -47px
+                right: 0px
+
 @media screen and (min-width: 768px)
     body   
         font-size: 1.2em
@@ -209,7 +230,7 @@
                 text-align: center
                 letter-spacing: 0.1rem
                 margin: 1rem 2.5vw
-                box-shadow: 0 10px 20px rgba(0,0,0,0.1)
+                box-shadow: 5px 6px 8px rgba(0,0,0,0.1)
 
                 &:before
                     content: ""
@@ -254,9 +275,28 @@
                     a:hover 
                         color: $paper
 
+    footer
+        padding: 5rem 0
+    
     .container-b 
         padding-left: 8vw
         padding-right: 8vw
+
+    .content-area
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: center
+
+        .col-content-section
+            // order: 0
+            flex: 2
+            align-self: auto
+        
+        .col-image-section
+            // order: 0
+            flex: 1
+            align-self: auto
 
     .section-heading 
         font-size: 4vw
@@ -518,6 +558,23 @@
             a
                 img
                     width: 40%
+
+    .content-area
+
+        .col-image-section
+
+            .img-contact
+                margin-top: -9rem
+
+    .contact-form 
+        position: relative
+
+        input[type=submit], button
+            position: absolute
+            bottom: -9rem
+            font-size: 2rem
+            right: 2.5rem
+
 
 @media screen and (max-height: 800px)
     .banner

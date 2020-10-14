@@ -17,11 +17,13 @@ $body-font: "Raleway", sans-serif
 body   
     background: $bg
     font-family: 'Raleway', sans-serif
-    line-height: 1.4
+    font-weight: 300
+    line-height: 1.7
 
 h1, h2, h3, h4, h5, h6 
     font-family: 'Oswald', sans-serif
     font-weight: 200
+    line-height: 1.2
 
 @media screen and (max-width: 767px)
     
@@ -40,16 +42,16 @@ h1, h2, h3, h4, h5, h6
 @media screen and (min-width: 768px)
 
     h1 
-        font-size: 22pt
+        font-size: 36pt
 
     h2
-        font-size: 20pt
+        font-size: 34pt
 
     h3 
-        font-size: 18pt
+        font-size: 30pt
 
     h4, h5, h6 
-        font-size: 16pt
+        font-size: 28pt
 
 
 
@@ -77,6 +79,9 @@ a:hover, a:focus, a:active
     text-transform: uppercase
     // font-size: 12pt
     text-decoration: none
+    border: none
+    border-radius: 0
+    cursor: pointer
     transition: all .4s ease-in-out
 
     &:hover
@@ -141,12 +146,20 @@ a:hover, a:focus, a:active
     padding-left: 10vh
     padding-right: 10vh
 
+.article-title 
+    font-size: 34pt
+
+.secondary-title 
+    text-transform: uppercase
+    font-size: 16pt
+    font-weight: 400
+    letter-spacing: 10px
 
 .top-pad
-    padding-top: 2rem
+    padding-top: 3rem
 
 .bottom-pad
-    padding-bottom: 2rem
+    padding-bottom: 3rem
 
 .services-home
     margin: 5rem 0 0
@@ -214,6 +227,7 @@ a:hover, a:focus, a:active
         line-height: 1.5
         color: $beige
         margin-top: -2rem
+        font-size: 20pt
         position: absolute
         top: 0
         left: 0
@@ -450,6 +464,81 @@ a:hover, a:focus, a:active
     text-align: center
     border: 1px solid $beige
     color: $beige
+
+.social-links 
+    display: flex
+    align-items: center
+    margin: 3rem 0
+
+    a
+        margin-right: 2.4rem
+        img
+            width: 1.8rem
+
+.content-area
+    
+    .col-image-section
+        position: relative
+        text-align: center
+
+        img, .img-about
+            width: 77%
+            margin: 0 auto
+            position: relative
+            z-index: 2
+        
+        .img-about 
+            box-shadow: 0 0 40px rgba(0,0,0,0.4)
+        
+        .img-about-accent
+            position: absolute
+            z-index: 1
+            left: -16%
+            top: 40%
+            width: 42%
+            filter: brightness(0.09)
+.bg-light
+    background: #fff
+
+.contact-form 
+    input[type=text]
+        display: block
+        border: none
+        border-bottom: 1px solid $beige
+        font-family: $display-font
+        font-weight: 300
+        // font-size: 2vw
+        line-height: 2
+        width: 100%
+        color: $beige
+        padding: 1rem 0
+        margin-bottom: 1rem
+        transition: all .4s ease-in-out
+
+        &::placeholder 
+            color: $beige
+            opacity: 1
+
+        &:focus
+            outline: none
+            padding-left: 1rem
+            color: $terracotta
+
+        &:last-child
+            margin-bottom: 3rem
+
+.inner-services
+    // background: $moss
+    overflow: hidden
+    
+    .gallery-block__body .block-residential, 
+    .gallery-block__body .block-commercial
+        margin-left: 0
+
+    a
+        // color: #075046
+        font-size: 1.6rem
+        font-weight: 300
 
 @import header
 @import media
