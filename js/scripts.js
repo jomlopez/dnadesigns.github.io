@@ -9,6 +9,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Fetch IG photos
 const instagramRegExp = new RegExp(
     /<script type="text\/javascript">window\._sharedData = (.*);<\/script>/
   );

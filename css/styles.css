@@ -95,6 +95,15 @@ a:hover, a:focus, a:active {
   color: #fff !important;
 }
 
+.btn-white {
+  border: 1px solid #F0EEEA;
+  color: #F0EEEA;
+}
+.btn-white:hover {
+  background: #F0EEEA;
+  color: #232320 !important;
+}
+
 .btn-primary {
   color: #fff;
   background: #995F44;
@@ -144,11 +153,20 @@ a:hover, a:focus, a:active {
 
 .container {
   padding: 0 5vh;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .container-c {
   padding-left: 10vh;
   padding-right: 10vh;
+  max-width: 1200px;
+}
+
+.centered-box {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .article-title {
@@ -204,6 +222,9 @@ a:hover, a:focus, a:active {
   background: url("../images/terrazo-bg.png") no-repeat;
   background-size: cover;
   background-attachment: fixed;
+}
+.power-statement .container {
+  max-width: 1200px;
 }
 .power-statement .container .quote {
   position: relative;
@@ -501,22 +522,64 @@ a:hover, a:focus, a:active {
   position: relative;
   text-align: center;
 }
-.content-area .col-image-section img, .content-area .col-image-section .img-about {
-  width: 77%;
+.content-area .col-image-section img {
   margin: 0 auto;
   position: relative;
   z-index: 2;
 }
-.content-area .col-image-section .img-about {
+.content-area .col-image-section img-about {
+  width: 77%;
+}
+.content-area .col-image-section .img-about-wide {
+  width: 100%;
+}
+.content-area .col-image-section .img-about, .content-area .col-image-section .img-about-wide {
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
 }
 .content-area .col-image-section .img-about-accent {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   left: -16%;
   top: 40%;
   width: 42%;
   filter: brightness(0.09);
+}
+
+.content-area-b .col-image-section .img-about, .content-area-b .col-image-section .img-about-wide {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.content-area-c .col-image-section .img-about, .content-area-c .col-image-section .img-about-wide {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+  display: block;
+}
+
+.about-page-content-wrapper {
+  position: relative;
+}
+.about-page-content-wrapper:before {
+  content: "";
+  position: absolute;
+  background: url("../images/about-terrazo-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.accent-pillow {
+  position: relative;
+}
+.accent-pillow:after {
+  content: "";
+  background: url("../images/pillow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: -6%;
+  right: 2%;
+  left: 70%;
+  bottom: 86%;
+  z-index: 2;
 }
 
 .bg-light {
@@ -729,6 +792,9 @@ header .menu-btn {
   .power-statement .container {
     display: flex;
     flex-direction: column;
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
   }
   .power-statement .container .quote {
     padding: 2rem 2rem;
@@ -823,6 +889,34 @@ header .menu-btn {
     top: -47px;
     right: 0px;
   }
+
+  .content-area-b .col-content-section {
+    position: relative;
+  }
+  .content-area-b .col-content-section .heading-vertical {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    transform: rotate(270deg) translate(-150%, -100%);
+    left: 0;
+    font-size: 6vw;
+  }
+  .content-area-b .col-content-section .heading-vertical:before {
+    content: "";
+    position: absolute;
+    left: -193%;
+    right: 105%;
+    height: 2px;
+    background: #B5A89D;
+    bottom: 50%;
+  }
+
+  .about-page-content-wrapper:before {
+    bottom: 40%;
+    top: 10%;
+    left: 0;
+    right: 50%;
+  }
 }
 @media screen and (min-width: 768px) {
   body {
@@ -897,6 +991,10 @@ header .menu-btn {
     color: #F0EEEA;
   }
 
+  .heading-vertical {
+    transform: rotate(-90deg);
+  }
+
   footer {
     padding: 5rem 0;
   }
@@ -904,6 +1002,9 @@ header .menu-btn {
   .container-b {
     padding-left: 8vw;
     padding-right: 8vw;
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .content-area {
@@ -915,10 +1016,107 @@ header .menu-btn {
   .content-area .col-content-section {
     flex: 2;
     align-self: auto;
+    max-width: 900px;
   }
   .content-area .col-image-section {
     flex: 1;
     align-self: auto;
+  }
+  .content-area div:first-child {
+    padding-right: 2.5rem;
+  }
+
+  .content-area-b {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .content-area-b .col-content-section {
+    flex: 1;
+    align-self: auto;
+    max-width: 900px;
+  }
+  .content-area-b .col-content-section h2 {
+    text-align: center;
+    font-size: 4rem;
+    width: 100%;
+    position: relative;
+  }
+  .content-area-b .col-content-section h2:before {
+    content: "";
+    position: absolute;
+    left: -100%;
+    right: 100%;
+    height: 2px;
+    background: #B5A89D;
+    bottom: 50%;
+  }
+  .content-area-b .col-image-section {
+    flex: 2;
+    align-self: auto;
+  }
+
+  .content-area-c {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: top;
+  }
+  .content-area-c .col-content-section {
+    flex: 1;
+    align-self: auto;
+    max-width: 900px;
+  }
+  .content-area-c .col-content-section h2, .content-area-c .col-content-section p {
+    margin-bottom: 2rem;
+  }
+  .content-area-c .col-image-section {
+    flex: 1;
+    align-self: auto;
+    margin-left: 2.5rem;
+  }
+  .content-area-c .col-image-section ul, .content-area-c .col-image-section li {
+    list-style: none;
+  }
+  .content-area-c .col-image-section img, .content-area-c .col-image-section h2 {
+    margin-bottom: 2rem;
+  }
+
+  .packages-page .row:not(:first-child) .content-area-c .col-content-section {
+    align-self: center;
+  }
+  .packages-page .row:nth-child(even) {
+    position: relative;
+  }
+  .packages-page .row:nth-child(even):before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    bottom: -10%;
+    left: 0;
+    right: 0;
+    background: #075046;
+    z-index: -1;
+  }
+  .packages-page .row:nth-child(even) .content-area-c {
+    color: #fff;
+  }
+  .packages-page .row:nth-child(even) .content-area-c .col-content-section {
+    order: 1;
+    padding-left: 2.5rem;
+  }
+  .packages-page .row:nth-child(even) .content-area-c .col-image-section {
+    order: 0;
+    padding-right: 2.5rem;
+    padding-left: 0;
+  }
+
+  .about-page-content-wrapper:before {
+    bottom: 30%;
+    top: 10%;
+    left: 10%;
+    right: 60%;
   }
 
   .section-heading {
@@ -1012,6 +1210,9 @@ header .menu-btn {
   .power-statement .container {
     display: flex;
     flex-direction: row;
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
   }
   .power-statement .container .quote {
     padding: 2.7rem 2.5rem;
@@ -1215,6 +1416,11 @@ header .menu-btn {
   }
 }
 @media screen and (min-width: 1024px) {
+  .power-statement .container {
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
+  }
   .power-statement .container .quote {
     display: flex;
     align-items: center;
@@ -1227,6 +1433,10 @@ header .menu-btn {
 
   .block-residential__row-b a {
     max-height: 400px;
+  }
+
+  .content-area .col-content-section {
+    max-width: 75%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1244,6 +1454,10 @@ header .menu-btn {
 
   .block-residential__row-b a {
     max-height: 250px;
+  }
+
+  .content-area .col-content-section {
+    max-width: 900px;
   }
 }
 footer .footer-nav {
