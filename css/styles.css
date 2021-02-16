@@ -624,6 +624,27 @@ a:hover, a:focus, a:active {
   font-weight: 300;
 }
 
+.content-area-c .col-content-section .article-title {
+  position: relative;
+}
+.content-area-c .col-content-section .article-title .header-line-accent {
+  content: "";
+  position: absolute;
+  height: 2px;
+}
+.content-area-c .col-content-section .article-title .header-line-accent.left {
+  background: #fff;
+  top: 50%;
+  left: -50%;
+  right: 105%;
+}
+.content-area-c .col-content-section .article-title .header-line-accent.right {
+  background: #232320;
+  top: 50%;
+  right: -40%;
+  left: 90%;
+}
+
 header {
   display: flex;
   align-items: flex-start;

@@ -605,6 +605,31 @@ a:hover, a:focus, a:active
         font-size: 1.6rem
         font-weight: 300
 
+.content-area-c 
+
+    .col-content-section
+
+        .article-title 
+            position: relative
+            
+            .header-line-accent
+                content: ''
+                position: absolute
+                height: 2px
+                
+                
+                &.left 
+                    background: #fff
+                    top: 50%
+                    left: -50%
+                    right: 105%
+                
+                &.right 
+                    background: $dark
+                    top: 50%
+                    right: -40%
+                    left: 90%
+
 @import header
 @import media
 @import footer
